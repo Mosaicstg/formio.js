@@ -56,6 +56,7 @@ var s3 = function(formio) {
                   key: response.data.key,
                   url: response.url + response.data.key,
                   acl: response.data.acl,
+                  original: file.name,
                   size: file.size,
                   type: file.type
                 });

@@ -39,6 +39,7 @@ var url = function(formio) {
               storage: 'url',
               name: fileName,
               url: xhr.responseURL + '/' + fileName,
+              original: file.name,
               size: file.size,
               type: file.type,
               data: respData

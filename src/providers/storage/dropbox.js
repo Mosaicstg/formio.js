@@ -26,6 +26,7 @@ var dropbox = function(formio) {
             var response = JSON.parse(xhr.response);
             response.storage = 'dropbox';
             response.size = file.size;
+            response.original = file.name;
             response.type = file.type;
             response.url = response.path_lower;
             resolve(response);
