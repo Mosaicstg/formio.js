@@ -1060,6 +1060,7 @@ var dropbox = function dropbox(formio) {
             var response = JSON.parse(xhr.response);
             response.storage = 'dropbox';
             response.size = file.size;
+            response.original = file.name;
             response.type = file.type;
             response.url = response.path_lower;
             resolve(response);
@@ -1171,6 +1172,7 @@ var s3 = function s3(formio) {
                   key: response.data.key,
                   url: response.url + response.data.key,
                   acl: response.data.acl,
+                  original: file.name,
                   size: file.size,
                   type: file.type
                 });
@@ -1268,6 +1270,7 @@ var url = function url(formio) {
               storage: 'url',
               name: fileName,
               url: xhr.responseURL + '/' + fileName,
+              original: file.name,
               size: file.size,
               type: file.type,
               data: respData
