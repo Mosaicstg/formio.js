@@ -2,7 +2,7 @@
   "name": "formiojs",
   "version": "2.9.5",
   "description": "Common js library for client side interaction with <form.io>",
-  "main": "dist/formio.js",
+  "main": "build/formio.js",
   "files": [
     "dist",
     "build",
